@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { serviceIcons } from './ServiceIcons'
 import { ChevronRight, CheckCircle } from 'lucide-react'
+import { getImagePath } from '../utils/imagePath'
 
 const services = [
   {
@@ -174,7 +175,7 @@ export function ServiceCards() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/team-photo.jpg"
+                  src={getImagePath("/images/team-photo.jpg")}
                   alt="Rohnert Park Transmission Team with ATRA Certification"
                   width={600}
                   height={400}
@@ -186,7 +187,7 @@ export function ServiceCards() {
                 {/* ATRA Badge */}
                 <div className="absolute bottom-6 left-6 bg-white p-4 rounded-lg shadow-xl animate-float">
                   <Image
-                    src="/images/atra.png"
+                    src={getImagePath("/images/atra.png")}
                     alt="ATRA - Automatic Transmission Rebuilders Association"
                     width={120}
                     height={120}
@@ -196,7 +197,7 @@ export function ServiceCards() {
                 {/* ASE Badge */}
                 <div className="absolute top-6 right-6 bg-white p-4 rounded-lg shadow-xl animate-float" style={{ animationDelay: '1s' }}>
                   <Image
-                    src="/images/ase-certified.png"
+                    src={getImagePath("/images/ase-certified.png")}
                     alt="ASE Certified"
                     width={80}
                     height={80}

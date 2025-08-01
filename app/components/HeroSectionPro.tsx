@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Star, Phone, Calendar, Clock, Award, Shield, ChevronRight, ArrowRight, Check, PlayCircle, Sparkles } from 'lucide-react'
 import { useEffect, useState, useRef } from 'react'
+import { getImagePath } from '../utils/imagePath'
 
 export function HeroSectionPro() {
   const [yearsInBusiness, setYearsInBusiness] = useState(0)
@@ -82,7 +83,7 @@ export function HeroSectionPro() {
           }}
         >
           <Image
-            src="/images/hero/main-hero.jpg"
+            src={getImagePath("/images/hero/main-hero.jpg")}
             alt="Rohnert Park Transmission Auto Repair Shop"
             fill
             className="object-cover"
@@ -120,7 +121,7 @@ export function HeroSectionPro() {
         <div className="group relative">
           <div className="absolute inset-0 bg-gradient-to-r from-rohnert-yellow to-yellow-600 rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
           <div className="relative glass-premium rounded-xl p-6 hover-lift cursor-pointer">
-            <Image src="/images/ase-certified.png" alt="ASE Certified" width={120} height={120} className="w-full h-auto" />
+            <Image src={getImagePath("/images/ase-certified.png")} alt="ASE Certified" width={120} height={120} className="w-full h-auto" />
             <div className="mt-3 text-center">
               <div className="text-xs font-semibold text-white/80">Master Certified</div>
               <div className="text-xs text-white/60">Since 1997</div>

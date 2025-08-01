@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Star, Phone, Calendar, Clock, Award, Shield, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { getImagePath } from '../utils/imagePath'
 
 export function HeroSection() {
   const [yearsInBusiness, setYearsInBusiness] = useState(0)
@@ -32,7 +33,7 @@ export function HeroSection() {
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero/main-hero.jpg"
+          src={getImagePath("/images/hero/main-hero.jpg")}
           alt="Rohnert Park Transmission Auto Repair Shop"
           fill
           className="object-cover scale-110 motion-safe:animate-slow-zoom"
@@ -45,13 +46,13 @@ export function HeroSection() {
       {/* Trust Badges Overlay */}
       <div className="absolute top-8 right-8 hidden lg:flex flex-col gap-4 z-20">
         <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-          <Image src="/images/ase-certified.png" alt="ASE Certified" width={100} height={100} className="opacity-90" />
+          <Image src={getImagePath("/images/ase-certified.png")} alt="ASE Certified" width={100} height={100} className="opacity-90" />
         </div>
         <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-          <Image src="/images/atra.png" alt="ATRA Member" width={100} height={100} className="opacity-90" />
+          <Image src={getImagePath("/images/atra.png")} alt="ATRA Member" width={100} height={100} className="opacity-90" />
         </div>
         <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-          <Image src="/images/repairpal.png" alt="RepairPal Certified" width={100} height={100} className="opacity-90" />
+          <Image src={getImagePath("/images/repairpal.png")} alt="RepairPal Certified" width={100} height={100} className="opacity-90" />
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getImagePath } from '../utils/imagePath'
 import { 
   Wrench, 
   Car, 
@@ -103,7 +104,7 @@ export default function ServicesPage() {
       <section className="relative h-[400px] bg-black">
         <div className="absolute inset-0">
           <Image
-            src="/images/services-hero.jpg"
+            src={getImagePath("/images/services-hero.jpg")}
             alt="Auto Repair Services"
             fill
             className="object-cover opacity-40"

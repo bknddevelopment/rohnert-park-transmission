@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Facebook, Instagram, Linkedin, Star, Phone, MapPin, Clock } from 'lucide-react'
+import { getImagePath } from '../utils/imagePath'
 
 const services = [
   { name: 'Transmission Service', href: '/services/transmission-service' },
@@ -25,7 +26,7 @@ export function Footer() {
           <div>
             <div className="relative w-48 h-16 mb-4">
               <Image
-                src="/logo-white.svg"
+                src={getImagePath("/logo-white.svg")}
                 alt="Rohnert Park Transmission"
                 fill
                 className="object-contain"
@@ -71,10 +72,10 @@ export function Footer() {
             <p className="text-sm text-gray-400">We accept all major credit cards</p>
             {/* Payment icons will be added once available */}
             {/* <div className="flex space-x-2">
-              <Image src="/payment-icons/discover.svg" alt="Discover" width={40} height={25} />
-              <Image src="/payment-icons/mastercard.svg" alt="Mastercard" width={40} height={25} />
-              <Image src="/payment-icons/visa.svg" alt="Visa" width={40} height={25} />
-              <Image src="/payment-icons/amex.svg" alt="American Express" width={40} height={25} />
+              <Image src={getImagePath("/payment-icons/discover.svg")} alt="Discover" width={40} height={25} />
+              <Image src={getImagePath("/payment-icons/mastercard.svg")} alt="Mastercard" width={40} height={25} />
+              <Image src={getImagePath("/payment-icons/visa.svg")} alt="Visa" width={40} height={25} />
+              <Image src={getImagePath("/payment-icons/amex.svg")} alt="American Express" width={40} height={25} />
             </div> */}
           </div>
 

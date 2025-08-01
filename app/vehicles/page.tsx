@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Car, CheckCircle, Phone, Clock } from 'lucide-react'
+import { getImagePath } from '../utils/imagePath'
 
 export const metadata: Metadata = {
   title: 'Vehicle Repair Services by Brand | Rohnert Park Transmission',
@@ -59,7 +60,7 @@ export default function VehicleBrandsPage() {
       <section className="relative h-[400px] bg-black">
         <div className="absolute inset-0">
           <Image
-            src="/images/services-hero.jpg"
+            src={getImagePath("/images/services-hero.jpg")}
             alt="Vehicle Repair Services"
             fill
             className="object-cover opacity-40"

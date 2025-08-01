@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Phone, Clock, MapPin } from 'lucide-react'
+import { getImagePath } from '../utils/imagePath'
 
 interface ServicePageTemplateProps {
   title: string
@@ -141,14 +142,14 @@ export function ServicePageTemplate({
                 <h3 className="text-xl font-bold mb-4">Our Certifications</h3>
                 <div className="space-y-4">
                   <Image
-                    src="/images/ase-certified.png"
+                    src={getImagePath("/images/ase-certified.png")}
                     alt="ASE Certified"
                     width={100}
                     height={100}
                     className="mx-auto"
                   />
                   <Image
-                    src="/images/atra.png"
+                    src={getImagePath("/images/atra.png")}
                     alt="ATRA Member"
                     width={100}
                     height={100}

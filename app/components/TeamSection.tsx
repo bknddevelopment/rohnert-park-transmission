@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getImagePath } from '../utils/imagePath'
 
 interface TeamMember {
   name: string
@@ -47,7 +48,7 @@ export function TeamSection() {
           {/* Office Team Photo */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/team/team-office.jpg"
+              src={getImagePath("/images/team/team-office.jpg")}
               alt="Rohnert Park Transmission team in office"
               width={1200}
               height={600}
@@ -58,7 +59,7 @@ export function TeamSection() {
           {/* Shop Team Photo */}
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/team/team-shop.jpg"
+              src={getImagePath("/images/team/team-shop.jpg")}
               alt="Rohnert Park Transmission team outside shop"
               width={1200}
               height={600}

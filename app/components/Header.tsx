@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { ChevronDown, Phone, MapPin, Clock, Menu, X, AlertCircle, Star } from 'lucide-react'
+import { getImagePath } from '../utils/imagePath'
 
 const services = [
   { name: 'Transmission Service', href: '/services/transmission-service' },
@@ -133,7 +134,7 @@ export function Header() {
               <Link href="/" className="flex items-center">
                 <div className={`relative transition-all duration-300 ${isScrolled ? 'w-36 h-12' : 'w-44 h-14'}`}>
                   <Image
-                    src="/logo.svg"
+                    src={getImagePath("/logo.svg")}
                     alt="Rohnert Park Transmission & Auto Repair"
                     fill
                     className="object-contain"

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getImagePath } from '../utils/imagePath'
 
 export function AboutSection() {
   return (
@@ -19,7 +20,7 @@ export function AboutSection() {
           {/* Left Image */}
           <div className="relative">
             <Image
-              src="/images/team/team-office.jpg"
+              src={getImagePath("/images/team/team-office.jpg")}
               alt="Rohnert Park Transmission Team"
               width={600}
               height={400}
@@ -54,8 +55,8 @@ export function AboutSection() {
 
         {/* Certification Logos - Commented out until logos are available */}
         {/* <div className="mt-16 flex justify-center items-center gap-8 flex-wrap opacity-60 grayscale">
-          <Image src="/images/ase-certified.png" alt="ASE Certified" width={120} height={120} />
-          <Image src="/images/repairpal.png" alt="RepairPal Certified" width={120} height={120} />
+          <Image src={getImagePath("/images/ase-certified.png")} alt="ASE Certified" width={120} height={120} />
+          <Image src={getImagePath("/images/repairpal.png")} alt="RepairPal Certified" width={120} height={120} />
           <Image src="/images/atra.png" alt="ATRA Member" width={120} height={120} />
           <Image src="/images/ascca.png" alt="ASCCA Member" width={120} height={120} />
         </div> */}

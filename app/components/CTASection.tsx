@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { getImagePath } from '../utils/imagePath'
 
 export function CTASection() {
   return (
@@ -22,7 +23,7 @@ export function CTASection() {
               <Link href="/why-brake-and-rotor-repair-is-crucial-for-safe-driving">
                 <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
                   <Image
-                    src="/images/shop/shop-classic-cars.jpg"
+                    src={getImagePath("/images/shop/shop-classic-cars.jpg")}
                     alt="Brake and Rotor Repair"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -43,7 +44,7 @@ export function CTASection() {
               <Link href="/the-importance-of-transmission-service-for-your-vehicle">
                 <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
                   <Image
-                    src="/images/shop/shop-exterior.jpg"
+                    src={getImagePath("/images/shop/shop-exterior.jpg")}
                     alt="Transmission Service"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
