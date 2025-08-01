@@ -1,5 +1,5 @@
 import React from 'react';
-import { LocationPageTemplate } from '../../components/LocationPageTemplate';
+import { LocationPageTemplate } from '../../components/LocationPageTemplateOld';
 
 const SonomaAutoRepair = () => {
   const content = {
