@@ -98,10 +98,12 @@ const nextConfig = {
     ]
   },
   
-  // Enable static exports for GitHub Pages
-  output: 'export',
-  basePath: '/rohnert-park-transmission',
-  assetPrefix: '/rohnert-park-transmission',
+  // Enable static exports for GitHub Pages only in production
+  ...(process.env.NODE_ENV === 'production' ? {
+    output: 'export',
+    basePath: '/rohnert-park-transmission',
+    assetPrefix: '/rohnert-park-transmission',
+  } : {}),
 }
 
 module.exports = nextConfig
