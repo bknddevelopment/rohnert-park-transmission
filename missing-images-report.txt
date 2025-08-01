@@ -1,0 +1,50 @@
+MISSING IMAGES REPORT
+===================
+
+Based on the codebase analysis, the following images are referenced but NOT found in the public directory:
+
+1. SERVICE PAGE IMAGES (referenced in service pages but missing):
+   - /images/differential-service-and-repair.jpg
+   - /images/transfer-case-repair.jpg
+   - /images/fuel-system-service.jpg
+   - /images/ac-and-heat-repair.jpg
+   - /images/tire-services.jpg
+   - /images/water-pump-service.jpg
+   - /images/check-engine-light.jpg
+   - /images/engine-tune-up.jpg
+   - /images/maintenance-schedule.jpg
+   - /images/brake-and-rotor-repair.jpg
+   - /images/transmission-service.jpg
+   - /images/service-default.jpg
+
+2. CERTIFICATION LOGOS (referenced in AboutSection.tsx and ServicePageTemplate.tsx):
+   - /images/ase-certified.png
+   - /images/repairpal.png
+   - /images/atra.png
+   - /images/ascca.png
+   - /images/atra-logo.png (referenced in ServiceCards.tsx)
+
+3. PAYMENT ICONS (referenced in Footer.tsx, directory exists but is empty):
+   - /payment-icons/discover.svg
+   - /payment-icons/mastercard.svg
+   - /payment-icons/visa.svg
+   - /payment-icons/amex.svg
+
+4. META/SEO IMAGES (referenced in layout.tsx):
+   - /og-image.jpg
+   - /twitter-image.jpg
+   - /apple-touch-icon.png
+
+5. LOGO IMAGE (referenced in JsonLd.tsx):
+   - /logo.jpg (Note: logo.svg exists but .jpg version is referenced)
+
+IMAGES THAT EXIST AND WORK:
+- All team images in /images/team/
+- Shop gallery images in /images/shop/
+- Hero image at /images/hero/main-hero.jpg
+- Gallery thumbnail at /images/gallery/thumbnail_IMG_7122.jpg
+- Logo SVGs (logo.svg and logo-white.svg)
+- Services hero image at /images/services-hero.jpg
+- Team photo at /images/team-photo.jpg
+
+TOTAL MISSING: 22 images

@@ -1,0 +1,16 @@
+{
+  "name": "Rohnert Park Transmission",
+  "short_name": "RP Transmission",
+  "description": "Expert automotive transmission repair and maintenance services in Rohnert Park, CA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#dc2626",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
