@@ -1,4 +1,4 @@
-import { LocationPageTemplate, generateLocationMetadata } from '@/app/components/LocationPageTemplate'
+import { LocationPageTemplate, generateLocationMetadata } from '../../components/LocationPageTemplate'
 
 const city = "Petaluma"
 const description = "Expert auto repair services for Petaluma residents. Professional transmission repair, brake service, and complete automotive care just minutes from historic downtown Petaluma."

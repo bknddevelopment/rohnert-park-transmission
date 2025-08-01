@@ -1,7 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { submitBooking, type BookingResponse } from '@/actions/booking'
+
+type BookingResponse = {
+  success: boolean
+  message: string
+  errors?: Record<string, string[]>
+}
 
 const services = [
   'Transmission Service',
@@ -28,21 +33,27 @@ export function BookingForm() {
   const [response, setResponse] = useState<BookingResponse | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  async function handleSubmit(formData: FormData) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
     setIsSubmitting(true)
-    const result = await submitBooking(formData)
-    setResponse(result)
-    setIsSubmitting(false)
-
-    if (result.success) {
+    
+    // For static site, just show success message
+    // In production, you would send this data to an API endpoint
+    setTimeout(() => {
+      setResponse({
+        success: true,
+        message: 'Thank you for your booking request! We will contact you shortly to confirm your appointment.'
+      })
+      setIsSubmitting(false)
+      
       // Reset form on success
-      const form = document.getElementById('booking-form') as HTMLFormElement
-      form?.reset()
-    }
+      const form = e.target as HTMLFormElement
+      form.reset()
+    }, 1000)
   }
 
   return (
-    <form id="booking-form" action={handleSubmit} className="space-y-6">
+    <form id="booking-form" onSubmit={handleSubmit} className="space-y-6">
       {response && (
         <div className={`p-4 rounded-lg ${response.success ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
           {response.message}

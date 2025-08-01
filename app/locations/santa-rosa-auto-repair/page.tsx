@@ -1,4 +1,4 @@
-import { LocationPageTemplate, generateLocationMetadata } from '@/app/components/LocationPageTemplate'
+import { LocationPageTemplate, generateLocationMetadata } from '../../components/LocationPageTemplate'
 
 const city = "Santa Rosa"
 const description = "Professional auto repair services for Santa Rosa residents. Expert transmission repair, brake service, and complete automotive care just minutes from downtown Santa Rosa."

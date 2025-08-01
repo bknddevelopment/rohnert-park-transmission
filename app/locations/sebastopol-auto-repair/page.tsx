@@ -1,4 +1,4 @@
-import { LocationPageTemplate, generateLocationMetadata } from '@/app/components/LocationPageTemplate'
+import { LocationPageTemplate, generateLocationMetadata } from '../../components/LocationPageTemplate'
 
 const city = "Sebastopol"
 const description = "Trusted auto repair services for Sebastopol residents. Expert transmission repair, comprehensive automotive care, and honest service just 15 minutes from downtown Sebastopol."

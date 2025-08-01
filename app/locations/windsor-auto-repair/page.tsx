@@ -1,4 +1,4 @@
-import { LocationPageTemplate, generateLocationMetadata } from '@/app/components/LocationPageTemplate'
+import { LocationPageTemplate, generateLocationMetadata } from '../../components/LocationPageTemplate'
 
 const city = "Windsor"
 const description = "Professional auto repair services for Windsor residents. Expert transmission specialists and complete automotive care just 20 minutes south. Trusted since 1997."

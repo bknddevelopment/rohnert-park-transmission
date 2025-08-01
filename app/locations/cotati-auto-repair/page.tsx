@@ -1,4 +1,4 @@
-import { LocationPageTemplate, generateLocationMetadata } from '@/app/components/LocationPageTemplate'
+import { LocationPageTemplate, generateLocationMetadata } from '../../components/LocationPageTemplate'
 
 const city = "Cotati"
 const description = "Premier auto repair services for Cotati residents. Expert transmission specialists and full-service automotive care just minutes from downtown Cotati. Family-owned since 1997."
